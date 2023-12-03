@@ -1,10 +1,10 @@
-#### WPFStampante
+# WPFStampante
 
-### Classi e Funzionalità
-## `Stampante`
+# Classi e Funzionalità
+### `Stampante`
 La classe `Stampante` rappresenta la stampante e gestisce le operazioni principali come la stampa di pagine, la verifica dello stato dell'inchiostro e la gestione della carta.
 
-# Metodi Principali
+#### Metodi Principali
 `Stampa(Pagina p) -> bool`: Questo metodo tenta di stampare una pagina. Restituisce true se la stampa è riuscita, altrimenti false. Verifica la quantità di inchiostro disponibile e il numero di fogli.
 
  ```c#
@@ -86,10 +86,10 @@ public void AggiungiCarta(int qta)
         }
  ```
 
-## `Pagina`
+### `Pagina`
 La classe `Pagina` rappresenta una pagina da stampare, con le quantità specifiche di inchiostro per ciascun colore.
 
-# Costruttori
+#### Costruttori
 `public Pagina(int c, int m, int y, int b)`: Crea una pagina con le quantità specificate di inchiostro per i colori Ciano, Magenta, Giallo e Nero.
  ```c#
 public Pagina(int c, int m, int y, int b)
@@ -113,7 +113,7 @@ public Pagina()
         }
  ```
 
-## Proprietà
+### Proprietà
 `C`, `M`, `Y`, `B`: Proprietà che consentono di accedere e modificare le quantità di inchiostro per i colori Ciano, Magenta, Giallo e Nero.
 
  ```c#
