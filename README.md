@@ -1,5 +1,7 @@
 # WPFStampante
 
+WPFStampante è un progetto che permette di simulare una stampante su C#
+
 # Classi e Funzionalità
 ### `Stampante`
 La classe `Stampante` rappresenta la stampante e gestisce le operazioni principali come la stampa di pagine, la verifica dello stato dell'inchiostro e la gestione della carta.
