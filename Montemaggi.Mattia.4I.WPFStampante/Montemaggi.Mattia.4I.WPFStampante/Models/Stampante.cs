@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace Montemaggi.Mattia._4I.WPFStampante
 {
@@ -78,7 +78,12 @@ namespace Montemaggi.Mattia._4I.WPFStampante
 
         public void AggiungiCarta(int qta)
         {
-            _Fogli += qta;
+            if (qta >= 0)
+            {
+                _Fogli += qta;
+                if (_Fogli > 200)
+                    _Fogli = 200;
+            }
         }
 
     }
