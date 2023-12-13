@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace Montemaggi.Mattia._4I.WPFStampante
 {
@@ -11,10 +11,14 @@ namespace Montemaggi.Mattia._4I.WPFStampante
 
         public Pagina(int c, int m, int y, int b)
         {
-            if (c < 4) _C = c;
-            if (m < 4) _M = m;
-            if (y < 4) _Y = y;
-            if (b < 4) _B = b;
+            if((c<0 || c>3) || (m < 0 || m > 3) || (y < 0 || y > 3) || (b < 0 || b > 3))
+            {
+                throw new Exception();
+            }
+            _C = c;
+            _M = m;
+            _Y = y;
+            _B = b;
         }
 
         public Pagina()
