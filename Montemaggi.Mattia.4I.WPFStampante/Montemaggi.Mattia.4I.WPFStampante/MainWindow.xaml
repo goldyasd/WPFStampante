@@ -1,12 +1,49 @@
-﻿<Window x:Class="Montemaggi.Mattia._4I.WPFStampante.MainWindow"
+<Window x:Class="Montemaggi.Mattia._4I.WPFStampante.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Montemaggi.Mattia._4I.WPFStampante"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="MainWindow" Height="350" Width="870"
+        ResizeMode="NoResize">
 
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Label x:Name="ColorSfondo" Grid.Row="0" Grid.Column="0" Background="White"></Label>
+        <Label x:Name="ColorTesto" Grid.Row="0" Grid.Column="0" HorizontalAlignment="center" VerticalAlignment="Center" FontSize="15" FontFamily="Arial"></Label>
+        <Button Grid.Row="1" Grid.Column="0" FontSize="23" FontFamily="Verdana" Click="OnButtonClicked" >STAMPA</Button>
+        <Label Grid.Column="2" Grid.Row="0" HorizontalAlignment="Center" FontSize="15">Pagina</Label>
+        <Label Grid.Column="2" Grid.Row="0" Width="15" Height="15" Margin="10,76,0,30" HorizontalAlignment="Left" Background="Cyan"></Label>
+        <Label Grid.Column="2" Grid.Row="0" Width="15" Height="15" Margin="85,76,0,30" HorizontalAlignment="Left" Background="Magenta"></Label>
+        <Label Grid.Column="2" Grid.Row="0" Width="15" Height="15" Margin="163,76,0,30" HorizontalAlignment="Left" Background="Yellow"></Label>
+        <Label Grid.Column="2" Grid.Row="0" Width="15" Height="15" Margin="242,76,0,30" HorizontalAlignment="Left" Background="Black"></Label>
+        <Label x:Name="Fogli" Grid.Column="1" Grid.Row="0" HorizontalAlignment="Center" FontSize="15">Fogli 200/200</Label>
+        <Label x:Name="Ciano" Grid.Column="1" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="12" Margin="0,30,0,0">Ciano 100/100</Label>
+        <Label x:Name="Magenta" Grid.Column="1" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="12" Margin="0,47,0,0">Magenta 100/100</Label>
+        <Label x:Name="Giallo" Grid.Column="1" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="12" Margin="0,65,0,0">Giallo 100/100</Label>
+        <Label x:Name="Nero" Grid.Column="1" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="12" Margin="0,83,0,0" Grid.RowSpan="2">Nero 100/100</Label>
+
+        <TextBox x:Name="CBox" Grid.Row="0" Grid.Column="2" Width="15" Height="25" HorizontalAlignment="Left" Margin="10,35,0,61" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">0</TextBox>
+        <TextBox x:Name="MBox" Grid.Row="0" Grid.Column="2" Width="15" Height="25" HorizontalAlignment="Left" Margin="85,35,0,61" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">0</TextBox>
+        <TextBox x:Name="YBox" Grid.Row="0" Grid.Column="2" Width="15" Height="25" HorizontalAlignment="Left" Margin="163,35,0,61" RenderTransformOrigin="0.718,0.61" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">0</TextBox>
+        <TextBox x:Name="BBox" Grid.Row="0" Grid.Column="2" Width="15" Height="25" HorizontalAlignment="Left" Margin="242,35,0,61" RenderTransformOrigin="0.718,0.61" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">0</TextBox>
+        <Button Grid.Row="0" Grid.Column="2" Width="150" Height="20" Margin="61,96,62,5" Click="RandomPage">Genera Pagina Random</Button>
+        <Button Grid.Column="2" Margin="0,146,142,73" Grid.RowSpan="2" Background="Cyan" Content="Cambia Colore" Click="ChangeC"/>
+        <Button Grid.Column="2" Margin="141,146,0,73" Grid.RowSpan="2" Background="Magenta" Content="Cambia Colore" Click="ChangeM"/>
+        <Button Grid.Column="2" Margin="0,73,142,0" Grid.Row="1" Background="Yellow" Content="Cambia Colore" Click="ChangeY"/>
+        <Button Grid.Column="2" Margin="141,73,0,0" Grid.Row="1" Background="Black" Content="Cambia Colore" Foreground="White" Click="ChangeB"/>
+        <TextBox x:Name="Carta" Grid.Row="1" Grid.Column="1" Width="50" Height="30" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="188,22,46,94"></TextBox>
+        <Button Grid.Row="1" Grid.Column="1" Height="30" Margin="22,22,96,94" Content="Aggiungi Carta" Click="ChangePaper"/>
+        <Label x:Name="StampConsole" Grid.Column="1" Background="Black" Margin="0,70,0,-4" Grid.Row="1" Foreground="LimeGreen" Content="Stampante avviata" FontFamily="Arial" FontSize="14"/>
     </Grid>
 </Window>
+
